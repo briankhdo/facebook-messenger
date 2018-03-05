@@ -5,7 +5,7 @@ module Facebook
         # Configuration provider for environment variables.
         class Environment
           def valid_verify_token?(verify_token)
-            ap ENV['VERIFY_TOKEN']
+            puts ENV['VERIFY_TOKEN']
             verify_token == ENV['VERIFY_TOKEN']
           end
 

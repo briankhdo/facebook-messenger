@@ -37,6 +37,8 @@ module Facebook
       private
 
       def verify
+        puts @request.params['hub.verify_token']
+
         if valid_verify_token?(@request.params['hub.verify_token'])
           @response.write @request.params['hub.challenge']
         else
